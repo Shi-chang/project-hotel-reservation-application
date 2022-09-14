@@ -6,10 +6,10 @@ public class Reservation {
 
     private Customer customer;
     private IRoom room;
-    private String checkInDate;
-    private String checkOutDate;
+    private Date checkInDate;
+    private Date checkOutDate;
 
-    public Reservation(Customer customer, IRoom room, String checkInDate, String checkOutDate) {
+    public Reservation(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
         this.customer = customer;
         this.room = room;
         this.checkInDate = checkInDate;
@@ -39,7 +39,7 @@ public class Reservation {
      *
      * @return the check in date for the reservation
      */
-    public String getCheckInDate() {
+    public Date getCheckInDate() {
         return checkInDate;
     }
 
@@ -48,7 +48,7 @@ public class Reservation {
      *
      * @return the check out date for the reservation
      */
-    public String getCheckOutDate() {
+    public Date getCheckOutDate() {
         return checkOutDate;
     }
 
