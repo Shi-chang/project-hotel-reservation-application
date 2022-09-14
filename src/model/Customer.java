@@ -1,5 +1,6 @@
 package model;
 
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -16,8 +17,8 @@ public class Customer {
      * Constructor for the class.
      *
      * @param firstName first name of the customer
-     * @param lastName last name of the customer
-     * @param email email address of the customer
+     * @param lastName  last name of the customer
+     * @param email     email address of the customer
      */
     public Customer(String firstName, String lastName, String email) {
         // Validates the pattern of the input email address
@@ -58,6 +59,24 @@ public class Customer {
      */
     public String getEmail() {
         return email;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Customer customer = (Customer) o;
+        return firstName.equals(customer.firstName) && lastName.equals(customer.lastName)
+            && email.equals(customer.email);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, email);
     }
 
     /**
