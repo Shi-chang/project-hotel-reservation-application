@@ -5,9 +5,9 @@ package model;
  */
 public class Room implements IRoom {
 
-    private String roomNumber;
-    private Double price;
-    private RoomType roomType;
+    protected String roomNumber;
+    protected Double price;
+    protected RoomType roomType;
 
     /**
      * The constructor for the class.
