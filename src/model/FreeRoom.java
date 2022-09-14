@@ -7,22 +7,9 @@ public class FreeRoom extends Room {
 
     /**
      * The constructor for the class.
-     *
-     * @param roomNumber number of the room
-     * @param roomType   type of the room
      */
     public FreeRoom(String roomNumber, RoomType roomType) {
         super(roomNumber, 0, roomType);
-    }
-
-    /**
-     * Returns if the room is free.
-     *
-     * @return true if the room is free, false otherwise
-     */
-    @Override
-    public boolean isFree() {
-        return true;
     }
 
     /**
