@@ -61,7 +61,7 @@ public class CustomerService {
      *
      * @return all the customers
      */
-    public Collection<Customer> getAllCustomers() {
+    public List<Customer> getAllCustomers() {
         return customers;
     }
 }
