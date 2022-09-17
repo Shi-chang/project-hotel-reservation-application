@@ -37,7 +37,7 @@ public class ReservationService {
     }
 
     /**
-     * Gets the specified room based on the room Id.
+     * Gets the room with the specified room Id.
      *
      * @param roomId the ID of the room
      * @return the room with the specified ID or null if no room can be found
@@ -50,6 +50,14 @@ public class ReservationService {
         }
         // If no room can be found, returns null
         return null;
+    }
+    /**
+     * Gets all the rooms.
+     *
+     * @return all the rooms
+     */
+    public List<IRoom> getAllRooms(){
+        return rooms;
     }
 
     /**
@@ -130,7 +138,10 @@ public class ReservationService {
         return customerReservations;
     }
 
-    public void printAllReservations(){
+    /**
+     * Prints all reservations.
+     */
+    public void printAllReservations() {
         for (Reservation reservation : reservations) {
             System.out.println("Reservations: ");
             System.out.println(reservation);
