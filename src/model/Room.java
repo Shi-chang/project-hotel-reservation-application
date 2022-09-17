@@ -6,7 +6,7 @@ package model;
 public class Room implements IRoom {
 
     protected String roomNumber;
-    protected Double price;
+    protected double price;
     protected RoomType roomType;
 
     /**
