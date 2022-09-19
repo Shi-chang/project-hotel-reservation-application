@@ -6,6 +6,9 @@ import model.IRoom;
 import service.CustomerService;
 import service.ReservationService;
 
+/**
+ * A class that provides resources for the admin.
+ */
 public class AdminResource {
 
     private static AdminResource adminResource = new AdminResource();
@@ -68,7 +71,7 @@ public class AdminResource {
     /**
      * Displays all reservations.
      */
-    public void displayAllReservations(){
+    public void displayAllReservations() {
         reservationService.printAllReservations();
     }
 }
