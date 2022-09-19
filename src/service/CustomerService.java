@@ -1,13 +1,11 @@
 package service;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import model.Customer;
 
 /**
- * The class for customer service. This class is a singleton class, so the instance can only be
- * obtained by calling the getInstance() method.
+ * A class that provides customer services.
  */
 public class CustomerService {
 
