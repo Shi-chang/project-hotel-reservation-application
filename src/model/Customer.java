@@ -20,9 +20,9 @@ public class Customer {
      * @param lastName  last name of the customer
      * @param email     email address of the customer
      */
-    public Customer(String firstName, String lastName, String email) {
-        // Validates the pattern of the input email address
-        String emailRegex = "^(.+)@(.+).(.+)$";
+    public Customer(String email, String firstName, String lastName) {
+        // The source of this regular expression comes from "https://regexlib.com/REDetails.aspx?regexp_id=1012"
+        String emailRegex = "^([0-9a-zA-Z]+[-._+&amp;])*[0-9a-zA-Z]+@([-0-9a-zA-Z]+[.])+[a-zA-Z]{2,6}$";
         Pattern pattern = Pattern.compile(emailRegex);
         Matcher matcher = pattern.matcher(email);
         if (!matcher.matches()) {
