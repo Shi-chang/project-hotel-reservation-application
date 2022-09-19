@@ -8,6 +8,9 @@ import model.Reservation;
 import service.CustomerService;
 import service.ReservationService;
 
+/**
+ * A class that provides hotel resource for users and the admin.
+ */
 public class HotelResource {
 
     private static HotelResource hotelResource = new HotelResource();
@@ -62,10 +65,10 @@ public class HotelResource {
     /**
      * Books a room.
      *
-     * @param customerEmail     the customer's email for the reservation
-     * @param room         the room for the reservation
-     * @param checkInDate  the date for check-in
-     * @param checkOutDate the date for check out
+     * @param customerEmail the customer's email for the reservation
+     * @param room          the room for the reservation
+     * @param checkInDate   the date for check-in
+     * @param checkOutDate  the date for check out
      * @return the reservation
      */
     public Reservation bookARoom(String customerEmail, IRoom room, Date checkInDate,
@@ -92,7 +95,7 @@ public class HotelResource {
      * @param checkOutDate the checkout date
      * @return rooms that are available for the specified check-in date and checkout date
      */
-    public List<IRoom> findARoom(Date checkInDate, Date checkOutDate){
+    public List<IRoom> findARoom(Date checkInDate, Date checkOutDate) {
         return reservationService.findRooms(checkInDate, checkOutDate);
     }
 
