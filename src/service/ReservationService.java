@@ -1,6 +1,5 @@
 package service;
 
-import java.util.Collection;
 import java.util.Date;
 import model.Customer;
 import model.IRoom;
@@ -8,6 +7,9 @@ import java.util.List;
 import java.util.ArrayList;
 import model.Reservation;
 
+/**
+ * A class that provides reservation services.
+ */
 public class ReservationService {
 
     private static ReservationService reservationService = new ReservationService();
@@ -51,12 +53,13 @@ public class ReservationService {
         // If no room can be found, returns null
         return null;
     }
+
     /**
      * Gets all the rooms.
      *
      * @return all the rooms
      */
-    public List<IRoom> getAllRooms(){
+    public List<IRoom> getAllRooms() {
         return rooms;
     }
 
@@ -107,6 +110,10 @@ public class ReservationService {
      * dates
      */
     private List<IRoom> getUnavailableRooms(Date checkInDate, Date checkOutDate) {
+        if (checkInDate == null || checkOutDate == null) {
+            throw new IllegalArgumentException("Dates cannot be null.");
+        }
+
         List<IRoom> unavailableRooms = new ArrayList<>();
 
         for (Reservation reservation : reservations) {
@@ -142,6 +149,11 @@ public class ReservationService {
      * Prints all reservations.
      */
     public void printAllReservations() {
+        if (reservations.isEmpty()) {
+            System.out.println("The reservations list is empty.\n");
+            return;
+        }
+
         for (Reservation reservation : reservations) {
             System.out.println("Reservations: ");
             System.out.println(reservation);
