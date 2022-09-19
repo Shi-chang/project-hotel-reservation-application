@@ -2,6 +2,9 @@ package model;
 
 import java.util.Date;
 
+/**
+ * The reservation class that handles operations of a reservation.
+ */
 public class Reservation {
 
     private Customer customer;
