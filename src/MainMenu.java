@@ -98,7 +98,7 @@ public class MainMenu {
         boolean isRoomAvailable = false;
         while (!isRoomAvailable) {
             System.out.println("Available rooms: ");
-            System.out.println(availableRooms);
+            printAvailableRooms(availableRooms);
             System.out.println("Select a room by inputting room number: ");
             String roomNumber = scanner.next();
             IRoom selectedRoom = hotelResource.getRoom(roomNumber);
@@ -109,6 +109,7 @@ public class MainMenu {
             }
             hotelResource.bookARoom(customer.getEmail(), selectedRoom, checkInDate, checkOutDate);
             System.out.println("Reservation is successful. Thank you!");
+            isRoomAvailable = true;
         }
     }
 
@@ -212,7 +213,7 @@ public class MainMenu {
      * @return the input date
      */
     private static Date getDateFromUser(String prompt, String warning) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY/MM/DD");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd");
         Date inputDate = null;
 
         boolean isValid = false;
@@ -225,7 +226,6 @@ public class MainMenu {
                 System.out.println(warning);
             }
         }
-
         return inputDate;
     }
 
@@ -250,5 +250,16 @@ public class MainMenu {
         }
 
         return inputChar;
+    }
+
+    /**
+     * Prints the available rooms.
+     *
+     * @param availableRooms rooms that are available
+     */
+    private static void printAvailableRooms(List<IRoom> availableRooms) {
+        for (IRoom room : availableRooms) {
+            System.out.println(room);
+        }
     }
 }
