@@ -8,7 +8,7 @@ This project is a hotel reservation application that allows the adminstrator to 
 4. More experience on handling potential illegal inputs from the user.
 
 # Demo of the App
-
+https://raw.githubusercontent.com/Shi-chang/project-hotel-reservation-application/main/src/res/project-hotel-reservation-application.gif
 
 # Application Architecture
 The UML diagram of the app is shown below.
