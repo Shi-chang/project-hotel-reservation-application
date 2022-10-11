@@ -1,7 +1,9 @@
 import api.AdminResource;
 import java.util.Arrays;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
+import model.Customer;
 import model.IRoom;
 import model.Room;
 import model.RoomType;
@@ -26,10 +28,10 @@ public class AdminMenu {
                 String choice = displayAdminMenu();
                 switch (choice) {
                     case "1":
-                        System.out.println(adminResource.getAllCustomers());
+                        printAllCustomers(adminResource.getAllCustomers());
                         break;
                     case "2":
-                        System.out.println(adminResource.getAllRooms());
+                        printAllRooms(adminResource.getAllRooms());
                         break;
                     case "3":
                         adminResource.displayAllReservations();
@@ -138,5 +140,27 @@ public class AdminMenu {
         }
 
         return inputChar;
+    }
+
+    /**
+     * Prints all rooms in the list.
+     *
+     * @param allRooms all rooms in the list
+     */
+    private static void printAllRooms(List<IRoom> allRooms) {
+        for (IRoom room : allRooms) {
+            System.out.println(room);
+        }
+    }
+
+    /**
+     * Prints all customers in the list.
+     *
+     * @param allCustomers all rooms in the list
+     */
+    private static void printAllCustomers(List<Customer> allCustomers) {
+        for (Customer customer : allCustomers) {
+            System.out.println(customer);
+        }
     }
 }
