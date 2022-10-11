@@ -12,6 +12,7 @@ This project is a hotel reservation application that allows the adminstrator to 
 
 # Application Architecture
 The UML diagram of the app is shown below.
+<a>https://raw.githubusercontent.com/Shi-chang/project-hotel-reservation-application/87ba57b1e8073fd0c952e9900b29a9031d3c8f1a/src/res/UML%20Diagram.svg</a>
 Different layers were used to support modularization and decoupling. Layering was achieved by ensuring that there are no cross-communication calls from one layer to another.
 
 # Acknowledgements
