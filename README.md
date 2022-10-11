@@ -15,4 +15,4 @@ The UML diagram of the app is shown below.
 Different layers were used to support modularization and decoupling. Layering was achieved by ensuring that there are no cross-communication calls from one layer to another.
 
 # Acknowledgements
-I would like to thank the instructor for the course, Jeff Phillips from Udacity, for providing a clear and easy to understand course module.
+I would like to thank the instructor of the course, Jeff Phillips from Udacity, for providing a clear and easy to understand course module.
